@@ -30,7 +30,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-SyW7EIDm9)
 - Live Site URL: [Site](https://lucasf5.github.io/sunnyside-agency-landing-page/)
 
 ## My process
