@@ -1,0 +1,143 @@
+// Cores principais
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan: hsl(167, 40%, 24%);
+$Dark-blue: hsl(198, 62%, 26%);
+$Light-blue: RGB(62, 191, 255);
+$Dark-moderate-cyan: hsl(168, 34%, 41%);
+
+// Neutral
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+$White-transparente: hsla(0, 0%, 100%, 0.233);
+
+// Ramificacoes do hover
+$Light-Yellow: hsla(51, 100%, 49%, 0.514);
+$Light-Soft-red: hsla(7, 99%, 70%, 0.514);
+
+// Fontes
+$Barlow: "Barlow", sans-serif;
+$Fraunces: "Fraunces", serif;
+
+// Tamanho Fonte -> @exteds
+%fontPadrao {
+  font-size: 1rem;
+}
+%fontTitulo {
+  font-size: 2.5rem;
+}
+
+// Placeholders -> @exteds
+%no-Decoration {
+  text-decoration: none;
+  list-style-type: none;
+}
+// Mixins -> @include
+@mixin flx($propriedade, $centralizacao) {
+  display: flex;
+  align-items: center;
+  #{$propriedade}: $centralizacao;
+}
+@mixin flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+@mixin flex-header-responsivo-menu{
+  gap: 2rem;
+  display: none;
+  border-radius: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: -100rem;
+  top: 5rem;
+  z-index: 1;
+  width: 150px;
+  height: 250px;
+  transition: 0.5s all;
+  background-color: $White;
+}
+@mixin flex-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 10rem;
+}
+@mixin containerBackground {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+}
+
+@mixin main-parte-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+@mixin main-parte-texto-responsivo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;  
+}
+
+@mixin main-parte3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+}
+
+@mixin main-parte3-responsivo {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+}
+
+@mixin main-parte-text-links {
+  position: absolute;
+  display: block;
+  bottom: 0.2rem;
+  width: 173px;
+  height: 6px;
+  transition: 1s all;
+  z-index: -1;
+}
+@mixin main-parte-text-links-responsivo {
+  position: absolute;
+  display: block;
+  bottom: 0.2rem;
+  width: 100px;
+  height: 6px;
+  transition: 1s all;
+  z-index: -1;
+}
+@mixin main-parte {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin main-parte-responsivo {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+@mixin background-imagens {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+

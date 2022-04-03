@@ -1,0 +1,65 @@
+#header{
+    overflow: hidden;
+    background-color: $Light-blue;
+    .cabecalho{
+        @include flx(justify-content, space-around);
+        font-family: $Barlow;
+        font-weight: 600;
+        width: 100vw;
+        height: 100px;
+
+        &__navbar{
+            &-hamburguer{
+                display: none
+            }
+            &__nav-alternativo{
+                display: none
+            }
+            &__nav{
+                &-ul{
+                    @include flex-header;
+                    &-li{
+                        &-a{
+                            color: $White;
+                            @extend %fontPadrao;
+                        }
+                        .contact{
+                            background-color: $White-transparente;
+                            border-radius: 2rem;
+                            padding: .8rem 1.5rem;
+                            &:hover{
+                                background-color: $White;
+                                color: $Very-dark-desaturated-blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        @include flex-column;
+        background-image: url('../../images/desktop/image-header.jpg');
+        @include containerBackground;
+        height: calc(100vh - 100px);
+        &__fontCreatives{
+            @extend %fontTitulo;
+            font-family: $Fraunces;
+            color: $White;
+        }
+        &__imageArrow{
+            &-img{
+                width: 2rem;
+                position: absolute;
+                top: 15rem;
+                animation: identifier 1s alternate infinite;
+            }
+        }
+    }
+}
+
+@keyframes identifier {
+    to{
+        top: 17rem;
+    }
+}

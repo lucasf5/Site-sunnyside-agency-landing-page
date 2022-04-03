@@ -1,0 +1,171 @@
+@media (max-width: 768px) {
+  #main {
+    .parte1 {
+      @include main-parte-responsivo;
+      &__texto {
+        @include main-parte-texto-responsivo;
+        text-align: center;
+        width: 100vw;
+        &-titulo {
+          font-size: 2.5rem;
+        }
+        &-explicacao {
+          font-size: 1rem;
+          line-height: 1.3rem;
+        }
+      }
+      &__imagem {
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+    .parte2 {
+      @include main-parte-responsivo;
+      flex-direction: column;
+      &__texto {
+        @include main-parte-texto-responsivo;
+        text-align: center;
+        width: 100vw;
+        &-titulo {
+          font-size: 2.5rem;
+        }
+        &-explicacao {
+          font-size: 1rem;
+          line-height: 1.3rem;
+        }
+      }
+      &__imagem {
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+    .parte3 {
+      @include main-parte-responsivo;
+      &__texto {
+        &-esquerdo {
+          @include main-parte3;
+          @include background-imagens;
+          width: 100vw;
+        }
+        &-direito {
+          @include main-parte3;
+          @include background-imagens;
+          width: 100vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  #header {
+    .cabecalho {
+      &__navbar {
+        &-hamburguer {
+          display: block;
+          cursor: pointer;
+        }
+        &__nav {
+          display: none;
+        }
+        &__nav-alternativo {
+          display: block;
+          .displayMenu{
+            right: 0.2rem;
+            display: flex;
+            transition: 0.5s all;
+          }
+          &-ul {
+            @include flex-header-responsivo-menu;
+            &-li {
+              &-a {
+                color: $Very-dark-desaturated-blue;
+              }
+              .contact {
+                background-color: $Yellow;
+                border-radius: 2rem;
+                padding: 0.8rem 1.5rem;
+                &:hover {
+                  background-color: $White;
+                  color: $Very-dark-desaturated-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .container {
+      text-align: center;
+      &__fontCreatives{
+        font-size: 3rem;
+      }
+    }
+  }
+  #main {
+    .parte1 {
+      &__texto {
+        @include main-parte-texto-responsivo;
+        text-align: center;
+        width: 100vw;
+        &-titulo {
+          font-size: 2.5rem;
+        }
+        &-explicacao {
+          font-size: 1rem;
+          line-height: 1.3rem;
+        }
+      }
+      &__imagem {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+    .parte2 {
+      &__texto {
+        @include main-parte-texto-responsivo;
+        text-align: center;
+        width: 100vw;
+        &-titulo {
+          font-size: 2.5rem;
+        }
+        &-explicacao {
+          font-size: 1rem;
+          line-height: 1.3rem;
+        }
+      }
+      &__imagem {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+    .parte3 {
+      @include main-parte-responsivo;
+      &__texto {
+        &-esquerdo {
+          @include main-parte3;
+          @include background-imagens;
+          width: 100vw;
+        }
+        &-direito {
+          @include main-parte3;
+          @include background-imagens;
+          width: 100vw;
+        }
+        &-titulo {
+          font-family: $Fraunces;
+          color: $Very-dark-desaturated-blue;
+          font-size: 2rem;
+        }
+        &-explicacao {
+          font-family: $Barlow;
+          font-weight: 600;
+          font-size: 1rem;
+          color: $Very-dark-desaturated-blue;
+        }
+      }
+    }
+  }
+}

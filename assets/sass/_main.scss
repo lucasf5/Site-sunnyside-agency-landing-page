@@ -1,0 +1,133 @@
+#main{
+    overflow-x: hidden;
+    .parte1{
+        @include main-parte;
+        width: 100vw;
+        height: 100vh;
+        &__texto{
+            @include main-parte-texto;
+            padding: 4rem;
+            width: 50%;
+
+            &-titulo{
+                font-family: $Fraunces;
+                color: $Very-dark-desaturated-blue;
+                font-size: 3rem;
+                
+            }
+            &-explicacao{
+                font-family: $Barlow;
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+                color: $Grayish-blue;
+            }
+            &-link{
+                font-family: $Fraunces;
+                color: $Very-dark-desaturated-blue;
+                font-size: 1.5rem;
+                position: relative;
+                cursor: pointer;
+                &::before{
+                    content: '';
+                    @include main-parte-text-links;
+                    background-color: $Light-Yellow;
+                }
+                &:hover::before{
+                    height: 22px;
+                    z-index: -1;
+                    transition: 1s all;
+                }
+            }
+        }
+        &__imagem{
+            @include background-imagens;
+            background-image: url("../../images/markusjpg");
+            width: 50%;
+        }
+    }
+    .parte2{
+        @include main-parte;
+        width: 100vw;
+        height: 100vh;
+        &__texto{
+            @include main-parte-texto;
+            padding: 4rem;
+            width: 50%;
+
+            &-titulo{
+                font-family: $Fraunces;
+                color: $Very-dark-desaturated-blue;
+                font-size: 3rem;
+                
+            }
+            &-explicacao{
+                font-family: $Barlow;
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+                color: $Grayish-blue;
+            }
+            &-link{
+                font-family: $Fraunces;
+                color: $Very-dark-desaturated-blue;
+                font-size: 1.5rem;
+                position: relative;
+                cursor: pointer;
+                &::after{
+                    content: '';
+                    @include main-parte-text-links;
+                    background-color: $Light-Soft-red;
+                }
+                &:hover::after{
+                    height: 22px;
+                    z-index: -1;
+                    transition: 1s all;
+                }
+            }
+        }
+        &__imagem{
+            @include background-imagens;
+            background-position: center;
+            background-image: url("../../images/morango.jpg");
+            width: 50%;
+        }
+    }
+    .parte3{
+        @include main-parte;
+        &__texto{
+            &-esquerdo{
+                @include main-parte3;
+                @include background-imagens;
+
+                background-image: url("../../images/mora.jpg");
+                width: 50.8%;
+                height: 100vh;
+                padding: 0 5rem 5rem 5rem;
+                text-align: center
+            }
+            &-direito{
+                @include main-parte3;
+                @include background-imagens;
+                background-image: url("../../images/laranja.jpg");
+                background-size: cover;
+                width: 50%;
+                height: 100vh;
+                padding: 0 5rem 5rem 5rem;
+                text-align: center
+            }
+            &-titulo{
+                font-family: $Fraunces;
+                color: $Very-dark-desaturated-blue;
+                font-size: 3rem;
+                
+            }
+            &-explicacao{
+                font-family: $Barlow;
+                font-weight: 600;
+                font-size: 1.5rem;
+                color: $Very-dark-desaturated-blue;
+            }
+        }
+    }
+}
